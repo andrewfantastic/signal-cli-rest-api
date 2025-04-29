@@ -212,7 +212,8 @@ ENV SIGNAL_CLI_CONFIG_DIR=/home/.local/share/signal-cli
 ENV SIGNAL_CLI_UID=1000
 ENV SIGNAL_CLI_GID=1000
 
-ENTRYPOINT ["/entrypoint.sh"]
+# ENTRYPOINT ["/entrypoint.sh"]
+CMD ["bash"]
 
 HEALTHCHECK --interval=20s --timeout=10s --retries=3 \
     CMD curl -f http://localhost:${PORT}/v1/health || exit 1
