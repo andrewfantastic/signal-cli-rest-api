@@ -166,6 +166,8 @@ ENV GIN_MODE=release
 
 ENV PORT=8080
 
+RUN apt-get update && apt-get install -y --no-install-recommends bash procps
+
 ARG SIGNAL_CLI_VERSION
 ARG BUILD_VERSION_ARG
 
